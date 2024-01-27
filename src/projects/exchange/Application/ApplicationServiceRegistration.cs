@@ -5,6 +5,7 @@ using MediatR;
 using System.Reflection;
 using Application.Services.Repositories;
 using Application.Features.Shares.Rules;
+using Application.Features.Users.Rules;
 namespace Application
 {
     public static class ApplicationServiceRegistration
@@ -16,7 +17,7 @@ namespace Application
             services.AddMediatR(Assembly.GetExecutingAssembly());
 
             services.AddScoped<ShareBusinessRules>();
-            //services.AddScoped<AuthBusinessRules>();
+            services.AddScoped<UserBusinessRules>();
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));

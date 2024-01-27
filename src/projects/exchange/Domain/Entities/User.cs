@@ -10,6 +10,6 @@ namespace Domain.Entities
     public class User : Entity
     {
         public string Name { get; set; }
-        public virtual ICollection<Portfolio> Portfolios { get; set; } // Kullanıcının portföyleri
+        public virtual ICollection<Portfolio> Portfolios { get; set; }
     }
 }
