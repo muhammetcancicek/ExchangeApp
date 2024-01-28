@@ -13,7 +13,8 @@ namespace Domain.Entities
         public int PortfolioId { get; set; }
         public int ShareId { get; set; }
         public int Quantity { get; set; }
-        public double Rate { get; set; }
+        public double UnitPrice { get; set; }
+        public DateTime CreateDate { get; set; }
         public TradeType TradeType { get; set; }
         public virtual Portfolio Portfolio { get; set; }
         public virtual Share Share { get; set; }

@@ -19,6 +19,7 @@ namespace Application.Features.Shares.Profiles
         public MappingProfiles()
         {
             CreateMap<IPaginate<Share>, ShareListModel>().ReverseMap();
+            CreateMap<IPaginate<ShareListDtoWithPrice>, ShareListModel>().ReverseMap();
             CreateMap<Share,ShareListDto>().ReverseMap();
             CreateMap<Share, ShareGetByIdDto>().ReverseMap();
             CreateMap<Share, ShareGetByIdDto>().ReverseMap();

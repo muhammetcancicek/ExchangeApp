@@ -1,4 +1,5 @@
-﻿using Application.Features.Shares.Models;
+﻿using Application.Features.Shares.Dtos;
+using Application.Features.Shares.Models;
 using Application.Services.Repositories;
 using AutoMapper;
 using Core.Application.Requests;
@@ -29,7 +30,9 @@ namespace Application.Features.Shares.Queries.GetListShare
 
             public async Task<ShareListModel> Handle(GetListShareQuery request, CancellationToken cancellationToken)
             {
-                IPaginate<Share> shares = await _shareRepository.GetListAsync(index: request.PageRequest.Page,size:request.PageRequest.PageSize);
+                var qList = await _shareRepository.GetSharesWithLatestPricesAsync();
+                IPaginate<ShareListDtoWithPrice> shares = qList.ToPaginate(index: request.PageRequest.Page, size: request.PageRequest.PageSize);
+
 
                 ShareListModel mappedShareListModel = _mapper.Map<ShareListModel>(shares);
 

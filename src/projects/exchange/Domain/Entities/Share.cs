@@ -11,5 +11,7 @@ namespace Domain.Entities
     {
         public string Symbol { get; set; }
         public string Name { get; set; }
+        public virtual ICollection<Trade> Trades{ get; set; }
+
     }
 }

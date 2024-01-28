@@ -18,21 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Portfolios\Commands\" />
     <Folder Include="Features\Portfolios\Constants\" />
-    <Folder Include="Features\Portfolios\Dtos\" />
-    <Folder Include="Features\Portfolios\Models\" />
-    <Folder Include="Features\Portfolios\Profiles\" />
-    <Folder Include="Features\Portfolios\Queries\" />
-    <Folder Include="Features\Portfolios\Rules\" />
     <Folder Include="Features\Shares\Constants\" />
-    <Folder Include="Features\Trades\Commands\" />
     <Folder Include="Features\Trades\Constants\" />
-    <Folder Include="Features\Trades\Dtos\" />
-    <Folder Include="Features\Trades\Models\" />
-    <Folder Include="Features\Trades\Profiles\" />
-    <Folder Include="Features\Trades\Queries\" />
-    <Folder Include="Features\Trades\Rules\" />
     <Folder Include="Features\Users\Constants\" />
   </ItemGroup>
 

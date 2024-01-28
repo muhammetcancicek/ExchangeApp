@@ -12,6 +12,7 @@ namespace Application.Features.Brands.Commands.EditBrand
     {
         public EditShareCommandValidator()
         {
+            RuleFor(c => c.Name).NotEmpty();
             RuleFor(c => c.Symbol)
                 .NotEmpty()
                 .Length(3)

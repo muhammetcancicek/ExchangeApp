@@ -10,6 +10,6 @@ namespace Application.Features.Shares.Models
 {
     public class ShareListModel:BasePageableModel
     {
-        public IList<ShareListDto> Items { get; set; }
+        public IList<ShareListDtoWithPrice> Items { get; set; }
     }
 }

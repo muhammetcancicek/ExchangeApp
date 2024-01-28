@@ -15,6 +15,10 @@ namespace Persistence.Repositories
         public PortfolioRepository(BaseDbContext context) : base(context)
         {
         }
+        public async Task<bool> PortfolioHasShare(int portfolioId, int shareId)
+        {
+            return Context.Portfolios.Any(s => s.Id == portfolioId && s.Trades.Any(m => m.ShareId == shareId));
+        }
     }
 
 }
