@@ -1,0 +1,1546 @@
+{
+	"info": {
+		"_postman_id": "ed4a3f05-ddb3-4a7f-b654-b429a219a820",
+		"name": "WebAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9206062"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Portfolio",
+					"item": [
+						{
+							"name": "{Id}",
+							"item": [
+								{
+									"name": "/api/Portfolio/:Id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "http://localhost:12983/api/Portfolio/:Id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "12983",
+											"path": [
+												"api",
+												"Portfolio",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "1",
+													"description": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Portfolio/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Portfolio",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Portfolio/:Id",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:12983/api/Portfolio/:Id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "12983",
+											"path": [
+												"api",
+												"Portfolio",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "1",
+													"description": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Portfolio/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Portfolio",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Portfolio",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:12983/api/Portfolio?Page=0&PageSize=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "12983",
+									"path": [
+										"api",
+										"Portfolio"
+									],
+									"query": [
+										{
+											"key": "Page",
+											"value": "0"
+										},
+										{
+											"key": "PageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Portfolio?Page=<integer>&PageSize=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Portfolio"
+											],
+											"query": [
+												{
+													"key": "Page",
+													"value": "<integer>"
+												},
+												{
+													"key": "PageSize",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Portfolio",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": \"1\",\n  \"title\": \"New Portfolio\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:12983/api/Portfolio",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "12983",
+									"path": [
+										"api",
+										"Portfolio"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"userId\": \"<integer>\",\n  \"title\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Portfolio",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Portfolio"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Portfolio",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"5\",\n  \"title\": \"New title\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:12983/api/Portfolio",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "12983",
+									"path": [
+										"api",
+										"Portfolio"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<integer>\",\n  \"title\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Portfolio",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Portfolio"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Share",
+					"item": [
+						{
+							"name": "{Id}",
+							"item": [
+								{
+									"name": "/api/Share/:Id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:12983/api/Share/:Id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "12983",
+											"path": [
+												"api",
+												"Share",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Share/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Share",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Share/:Id",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:12983/api/Share/:Id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "12983",
+											"path": [
+												"api",
+												"Share",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Share/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Share",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Share",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:12983/api/Share?Page=0&PageSize=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "12983",
+									"path": [
+										"api",
+										"Share"
+									],
+									"query": [
+										{
+											"key": "Page",
+											"value": "0"
+										},
+										{
+											"key": "PageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Share?Page=<integer>&PageSize=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Share"
+											],
+											"query": [
+												{
+													"key": "Page",
+													"value": "<integer>"
+												},
+												{
+													"key": "PageSize",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Share",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"symbol\": \"NEW\",\n  \"name\": \"New Share\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:12983/api/Share",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "12983",
+									"path": [
+										"api",
+										"Share"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"symbol\": \"<string>\",\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Share",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Share"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Share",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"1\",\n  \"symbol\": \"XYZ\",\n  \"name\": \"XYZ Teknoloji\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:12983/api/Share",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "12983",
+									"path": [
+										"api",
+										"Share"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<integer>\",\n  \"symbol\": \"<string>\",\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Share",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Share"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Trade",
+					"item": [
+						{
+							"name": "ByPortfolioId",
+							"item": [
+								{
+									"name": "/api/Trade/ByPortfolioId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:12983/api/Trade/ByPortfolioId?Page=0&PageSize=10&portfolioId=1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "12983",
+											"path": [
+												"api",
+												"Trade",
+												"ByPortfolioId"
+											],
+											"query": [
+												{
+													"key": "Page",
+													"value": "0"
+												},
+												{
+													"key": "PageSize",
+													"value": "10"
+												},
+												{
+													"key": "portfolioId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Trade/ByPortfolioId?Page=<integer>&PageSize=<integer>&portfolioId=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Trade",
+														"ByPortfolioId"
+													],
+													"query": [
+														{
+															"key": "Page",
+															"value": "<integer>"
+														},
+														{
+															"key": "PageSize",
+															"value": "<integer>"
+														},
+														{
+															"key": "portfolioId",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "ByShareId",
+							"item": [
+								{
+									"name": "/api/Trade/ByShareId",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:12983/api/Trade/ByShareId?Page=0&PageSize=10&shareId=1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "12983",
+											"path": [
+												"api",
+												"Trade",
+												"ByShareId"
+											],
+											"query": [
+												{
+													"key": "Page",
+													"value": "0"
+												},
+												{
+													"key": "PageSize",
+													"value": "10"
+												},
+												{
+													"key": "shareId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:12983/api/Trade/ByShareId?Page=1&PageSize=10&shareId=1",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "12983",
+													"path": [
+														"api",
+														"Trade",
+														"ByShareId"
+													],
+													"query": [
+														{
+															"key": "Page",
+															"value": "1"
+														},
+														{
+															"key": "PageSize",
+															"value": "10"
+														},
+														{
+															"key": "shareId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{Id}",
+							"item": [
+								{
+									"name": "/api/Trade/:Id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:12983/api/Trade/:Id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "12983",
+											"path": [
+												"api",
+												"Trade",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:12983/api/Trade/:Id",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "12983",
+													"path": [
+														"api",
+														"Trade",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Failture",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:12983/api/Trade/:Id",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "12983",
+													"path": [
+														"api",
+														"Trade",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id",
+															"value": "345",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Buy",
+							"item": [
+								{
+									"name": "/api/Trade/Buy",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"portfolioId\": \"1\",\n  \"shareId\": \"1\",\n  \"quantity\": \"1\",\n  \"unitPrice\": \"100\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:12983/api/Trade/Buy",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "12983",
+											"path": [
+												"api",
+												"Trade",
+												"Buy"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"portfolioId\": \"1\",\n  \"shareId\": \"1\",\n  \"quantity\": \"2\",\n  \"unitPrice\": \"100\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:12983/api/Trade/Buy",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "12983",
+													"path": [
+														"api",
+														"Trade",
+														"Buy"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Failture",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"portfolioId\": \"1\",\n  \"shareId\": \"1\",\n  \"quantity\": \"2\",\n  \"unitPrice\": \"10\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:12983/api/Trade/Buy",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "12983",
+													"path": [
+														"api",
+														"Trade",
+														"Buy"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Sell",
+							"item": [
+								{
+									"name": "/api/Trade/Sell",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"portfolioId\": \"1\",\n  \"shareId\": \"1\",\n  \"quantity\": \"1\",\n  \"unitPrice\": \"100\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:12983/api/Trade/Sell",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "12983",
+											"path": [
+												"api",
+												"Trade",
+												"Sell"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"portfolioId\": \"1\",\n  \"shareId\": \"1\",\n  \"quantity\": \"1\",\n  \"unitPrice\": \"100\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Trade/Sell",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Trade",
+														"Sell"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Failture",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"portfolioId\": \"1\",\n  \"shareId\": \"1\",\n  \"quantity\": \"10000\",\n  \"unitPrice\": \"10\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:12983/api/Trade/Sell",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "12983",
+													"path": [
+														"api",
+														"Trade",
+														"Sell"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "{Id}",
+							"item": [
+								{
+									"name": "/api/User/:Id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:12983/api/User/:Id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "12983",
+											"path": [
+												"api",
+												"User",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/User/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"User",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/User/:Id",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:12983/api/User/:Id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "12983",
+											"path": [
+												"api",
+												"User",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/User/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"User",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/User",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:12983/api/User?Page=0&PageSize=11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "12983",
+									"path": [
+										"api",
+										"User"
+									],
+									"query": [
+										{
+											"key": "Page",
+											"value": "0"
+										},
+										{
+											"key": "PageSize",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/User?Page=<integer>&PageSize=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"User"
+											],
+											"query": [
+												{
+													"key": "Page",
+													"value": "<integer>"
+												},
+												{
+													"key": "PageSize",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"New User\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:12983/api/User",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "12983",
+									"path": [
+										"api",
+										"User"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/User",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"User"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/User",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"1\",\n  \"name\": \"New Name\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:12983/api/User",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "12983",
+									"path": [
+										"api",
+										"User"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/User",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"User"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
